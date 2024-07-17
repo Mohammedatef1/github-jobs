@@ -1,14 +1,14 @@
 import Image from "next/image";
 import noImg from "../../assets/no image.jpg";
 
-interface Job {
-  title: string;
-  company_name: string;
-  location: string;
-  via: string;
-  description: string;
-  thumbnail: string;
-  detected_extensions: Detected_Extentions;
+export interface Job {
+  title?: string;
+  company_name?: string;
+  location?: string;
+  via?: string;
+  description?: string;
+  thumbnail?: string;
+  detected_extensions?: Detected_Extentions;
 }
 
 interface Detected_Extentions {
@@ -33,7 +33,7 @@ const JobItem: React.FC<JobItemProps> = ({ job }) => {
       <div className="text-[#334680] ps-4">
         <h4 className="text-xs font-bold mb-1">{company_name}</h4>
         <h3 className="text-[16px] mb-2 hover:underline cursor-pointer">{title}</h3>
-        {detected_extensions.schedule_type.includes("Full-time") && <div className="rounded-[4px] py-1 px-2 border border-[#334680] w-max text-xs font-bold ">Full time</div>}
+        {detected_extensions?.schedule_type.includes("Full-time") && <div className="rounded-[4px] py-1 px-2 border border-[#334680] w-max text-xs font-bold ">Full time</div>}
       </div>
       <div className="ps-4 flex lg:mt-0 mt-4 ">
         <div className="text-[#B7BCCE] flex items-end gap-2 ">

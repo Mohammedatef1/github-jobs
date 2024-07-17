@@ -2,7 +2,13 @@ import Context from "@/context/Context";
 import { useContext } from "react";
 
 const FiterOptions = () => {
-  const { location, setLocation, fulltime, setFulltime } = useContext(Context);
+  const context = useContext(Context);
+
+  if (!context) {
+    throw new Error();
+  }
+
+  const { location, setLocation, fulltime, setFulltime } = context;
   return (
     <div>
       <div className="flex items-center">

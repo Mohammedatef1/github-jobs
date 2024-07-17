@@ -3,7 +3,14 @@ import useJobs from "@/hooks/useJobs";
 import { useContext } from "react";
 
 const Header = () => {
-  const { query, setQuery } = useContext(Context);
+  const context = useContext(Context);
+
+  if (!context) {
+    throw new Error();
+  }
+
+  const { query, setQuery } = context;
+
   const { refetch, isFetching } = useJobs();
   return (
     <nav>
