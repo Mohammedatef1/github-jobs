@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import noImg from "../../assets/no image.jpg";
 
 export interface Job {
@@ -9,6 +10,7 @@ export interface Job {
   description?: string;
   thumbnail?: string;
   detected_extensions?: Detected_Extentions;
+  job_id?: string;
 }
 
 interface Detected_Extentions {
@@ -20,7 +22,7 @@ interface JobItemProps {
 }
 
 const JobItem: React.FC<JobItemProps> = ({ job }) => {
-  const { title, company_name, location, via, description, detected_extensions, thumbnail } = job;
+  const { title, company_name, location, description, detected_extensions, thumbnail, job_id } = job;
   return (
     <div className="bg-white rounded-[4px] font-[roboto] p-3 grid grid-cols-[max-content_1fr] grid-rows-[max-content_max-content] border border-transparent lg:grid-cols-[max-content_1fr_max-content_max-content] lg:grid-rows-1 shadow-sm hover:border-blue-700 transition-colors">
       <Image
@@ -30,11 +32,13 @@ const JobItem: React.FC<JobItemProps> = ({ job }) => {
         className="w-[90px] h-[90px] row-span-full rounded-[4px]"
         alt=""
       />
-      <div className="text-[#334680] ps-4">
+      <Link
+        href={{ pathname: `/jobs/${title}`, query: { title, company_name, location, description, thumbnail } }}
+        className="text-[#334680] ps-4">
         <h4 className="text-xs font-bold mb-1">{company_name}</h4>
         <h3 className="text-[16px] mb-2 hover:underline cursor-pointer">{title}</h3>
         {detected_extensions?.schedule_type.includes("Full-time") && <div className="rounded-[4px] py-1 px-2 border border-[#334680] w-max text-xs font-bold ">Full time</div>}
-      </div>
+      </Link>
       <div className="ps-4 flex lg:mt-0 mt-4 ">
         <div className="text-[#B7BCCE] flex items-end gap-2 ">
           <svg

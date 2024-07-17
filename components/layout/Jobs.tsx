@@ -1,7 +1,7 @@
 // components/Jobs.tsx
-import React, { useContext } from "react";
-import useJobs from "@/hooks/useJobs";
 import Context from "@/context/Context";
+import useJobs from "@/hooks/useJobs";
+import React, { useContext } from "react";
 import JobItem from "../ui/JobItem";
 import Spinner from "../ui/Spinner";
 
@@ -13,6 +13,7 @@ interface Job {
   description?: string;
   thumbnail?: string;
   detected_extensions?: DetectedExtensions;
+  job_id?: string;
 }
 
 interface DetectedExtensions {

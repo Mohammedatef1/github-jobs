@@ -1,9 +1,6 @@
-import useJobs from "@/hooks/useJobs";
-import axios from "axios";
 import Content from "../components/layout/Content";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
-import JopPage from "../components/layout/JobPage";
 
 export default function Home() {
   return (
