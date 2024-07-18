@@ -9,6 +9,10 @@ const FiterOptions = () => {
   }
 
   const { location, setLocation, fulltime, setFulltime } = context;
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLocation(e.target.value);
+  };
   return (
     <div>
       <div className="flex items-center">
@@ -48,8 +52,10 @@ const FiterOptions = () => {
           type="radio"
           id="html"
           name="city"
-          value="london"
-          className="w-[18px] h-[18px] me-3 outline-none "
+          value="London"
+          onChange={handleChange}
+          checked={location === "London"}
+          className="w-[18px] h-[18px] me-3 outline-none"
         />
         <label htmlFor="html">London</label>
 
@@ -57,7 +63,9 @@ const FiterOptions = () => {
           type="radio"
           id="css"
           name="city"
-          value="amesterdam"
+          value="Amesterdam"
+          checked={location === "Amesterdam"}
+          onChange={handleChange}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
         <label htmlFor="css">Amesterdam</label>
@@ -66,7 +74,9 @@ const FiterOptions = () => {
           type="radio"
           id="javascript"
           name="city"
-          value="newyork"
+          value="New York"
+          onChange={handleChange}
+          checked={location === "New York"}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
         <label htmlFor="javascript">New York</label>
@@ -75,7 +85,9 @@ const FiterOptions = () => {
           type="radio"
           id="javascript"
           name="city"
-          value="berlin"
+          value="Berlin"
+          onChange={handleChange}
+          checked={location === "Berlin"}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
         <label htmlFor="javascript">Berlin</label>

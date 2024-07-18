@@ -14,12 +14,10 @@ const JobDetails = () => {
     return null;
   }
 
-  const thumbnailUrl = typeof thumbnail === "string" ? thumbnail : "";
-
   return (
     <main className="lg:px-28 lg:py-8 md:px-20 md:py-6 p-3 ">
       <JobPage
-        thumbnail={thumbnailUrl}
+        thumbnail={thumbnail as string}
         title={title}
         company_name={company_name}
         location={location}
