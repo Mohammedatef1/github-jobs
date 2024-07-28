@@ -1,22 +1,18 @@
-# Products Filter
+# GitHub Jobs
 
-Products Filter is a React application that displays products and provides options to sort them by price and filter them by color, size, or price range. The project leverages Upstash Vector for data storage, Tailwind for styling, and various libraries for functionality and state management.
+GitHub Jobs is a Next.js application that allows users to search for job titles and specify locations to find job listings. The project leverages SerpApi for job search data, React Query for data fetching and state management, and Axios for making HTTP requests.
 
 ## Features
 
-- Display a list of products.
-- Sort products by price.
-- Filter products by color, size, or price range.
+- Search for job titles.
+- Specify location for job search.
+- Display job search results dynamically.
 - Responsive and user-friendly interface.
 
 ## Technologies Used
 
 - Next.js
-- Upstash Vector
-- Tailwind CSS
+- React
+- SerpApi
 - React Query
-- Zod
-- shadcn UI
-- Lodash Debounce
 - Axios
-- Lucide React
