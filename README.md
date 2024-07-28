@@ -4,15 +4,15 @@ GitHub Jobs is a Next.js application that allows users to search for job titles 
 
 ## Features
 
-Search for job titles.
-Specify location for job search.
-Display job search results dynamically.
-Responsive and user-friendly interface.
+- Search for job titles.
+- Specify location for job search.
+- Display job search results dynamically.
+- Responsive and user-friendly interface.
 
 ## Technologies Used
 
-Next.js
-React
-SerpApi
-React Query
-Axios
+- Next.js
+- React
+- SerpApi
+- React Query
+- Axios
