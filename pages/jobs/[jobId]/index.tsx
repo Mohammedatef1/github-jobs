@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 const JobDetails = () => {
   const router = useRouter();
-  const { jobId, title, company_name, location, description, thumbnail } = router.query;
+  const { jobId, title, company_name, location, description, thumbnail, related_links } = router.query;
 
   console.log(router.query);
 
@@ -22,6 +22,7 @@ const JobDetails = () => {
         company_name={company_name}
         location={location}
         description={description}
+        related_links={related_links}
       />
       <Footer />
     </main>

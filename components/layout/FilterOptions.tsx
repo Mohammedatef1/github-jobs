@@ -1,5 +1,7 @@
 import Context from "@/context/Context";
 import { useContext } from "react";
+import EarthIcon from "../icons/EarthIcon";
+import WatchIcon from "../icons/WatchIcon";
 
 const FiterOptions = () => {
   const context = useContext(Context);
@@ -31,14 +33,7 @@ const FiterOptions = () => {
       </div>
       <h3 className="uppercase text-[#B9BDCF] font-[poppins] font-bold mt-8 text-sm ">Location</h3>
       <div className="bg-white flex items-center rounded-[4px]  p-3 gap-4 font-[roboto] my-[14px]">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#e8eaed">
-          <path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z" />
-        </svg>
+        <EarthIcon />
         <input
           type="text"
           placeholder="City, state, zip code or country"
