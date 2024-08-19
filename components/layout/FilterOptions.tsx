@@ -45,47 +45,47 @@ const FiterOptions = () => {
       <div className="ps-3 font-[poppins] text-sm font-[500] text-[#334680] grid grid-cols-[min-content_max-content] gap-y-4 my-6 items-center">
         <input
           type="radio"
-          id="html"
           name="city"
+          id="london"
           value="London"
           onChange={handleChange}
           checked={location === "London"}
           className="w-[18px] h-[18px] me-3 outline-none"
         />
-        <label htmlFor="html">London</label>
+        <label htmlFor="london">London</label>
 
         <input
           type="radio"
-          id="css"
           name="city"
-          value="Amesterdam"
-          checked={location === "Amesterdam"}
+          id="amsterdam"
+          value="Amsterdam"
+          checked={location === "Amsterdam"}
           onChange={handleChange}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
-        <label htmlFor="css">Amesterdam</label>
+        <label htmlFor="amsterdam">Amsterdam</label>
 
         <input
           type="radio"
-          id="javascript"
           name="city"
+          id="newyork"
           value="New York"
           onChange={handleChange}
           checked={location === "New York"}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
-        <label htmlFor="javascript">New York</label>
+        <label htmlFor="newyork">New York</label>
 
         <input
           type="radio"
-          id="javascript"
           name="city"
+          id="berlin"
           value="Berlin"
           onChange={handleChange}
           checked={location === "Berlin"}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
-        <label htmlFor="javascript">Berlin</label>
+        <label htmlFor="berlin">Berlin</label>
       </div>
     </div>
   );
