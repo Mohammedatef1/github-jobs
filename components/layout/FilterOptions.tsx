@@ -1,7 +1,6 @@
 import Context from "@/context/Context";
 import { useContext } from "react";
 import EarthIcon from "../icons/EarthIcon";
-import WatchIcon from "../icons/WatchIcon";
 
 const FiterOptions = () => {
   const context = useContext(Context);

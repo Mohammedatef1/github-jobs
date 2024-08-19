@@ -10,16 +10,20 @@ interface Job {
   location: string;
 }
 
-const fetchJobs = async (query: string, location: string): Promise<Job[]> => {
-  const response = await axios.get("/api/jobs", {
-    params: {
-      q: query || "java dev",
-      ltype: "1",
-      hl: "en",
-      location,
-    },
-  });
-  return response.data;
+const fetchJobs = async (query: string, location: string) => {
+  try {
+    const response = await axios.get("/api/jobs", {
+      params: {
+        q: query || "java dev",
+        ltype: "1",
+        hl: "en",
+        location,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const useJobs = (): UseQueryResult<Job[], Error> => {

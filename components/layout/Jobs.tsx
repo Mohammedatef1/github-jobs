@@ -30,20 +30,29 @@ const Jobs: React.FC = () => {
   const { fulltime } = context;
   const { data: jobs, isLoading, isError, isFetching } = useJobs();
 
+  if (isError) {
+    return <h3 className="text-center text-xl font-semibold">Error!</h3>;
+  }
+
+  if (!jobs && !isFetching) {
+    return <h3 className="text-center text-xl font-semibold">No Result!</h3>;
+  }
+
   if (isLoading) {
     return <Spinner />;
   }
 
-  if (isError) {
-    return <h2>Error</h2>;
-  }
+  const filteredJobs = fulltime && jobs ? jobs?.filter((job: Job) => job.detected_extensions?.schedule_type.includes("Full-time")) : jobs;
 
-  const filteredJobs = fulltime ? jobs?.filter((job: Job) => job.detected_extensions?.schedule_type.includes("Full-time")) : jobs;
+  console.log(jobs);
+  console.log(filteredJobs);
 
   return (
     <div className="flex flex-col gap-8">
       {isFetching && <Spinner />}
+
       {!isFetching &&
+        filteredJobs &&
         filteredJobs?.map((job: Job, index: number) => (
           <JobItem
             key={index}

@@ -28,7 +28,6 @@ interface JobItemProps {
 const JobItem: React.FC<JobItemProps> = ({ job }) => {
   const { title, company_name, location, description, detected_extensions, thumbnail, related_links } = job;
 
-  console.log(thumbnail);
   return (
     <div className="bg-white group rounded-[4px] font-[roboto] p-3 grid grid-cols-[max-content_1fr] grid-rows-[max-content_max-content] border border-transparent lg:grid-cols-[max-content_1fr_max-content_max-content] lg:grid-rows-1 shadow-sm hover:border-blue-700 transition-colors">
       <Image
@@ -43,7 +42,7 @@ const JobItem: React.FC<JobItemProps> = ({ job }) => {
         className="text-[#334680] ps-4">
         <h4 className="text-xs font-bold mb-1">{company_name}</h4>
         <h3 className="text-[16px] mb-2 group-hover:underline cursor-pointer">{title}</h3>
-        {detected_extensions?.schedule_type.includes("Full-time") && <div className="rounded-[4px] py-1 px-2 border border-[#334680] w-max text-xs font-bold ">Full time</div>}
+        {detected_extensions?.schedule_type?.includes("Full-time") && <div className="rounded-[4px] py-1 px-2 border border-[#334680] w-max text-xs font-bold ">Full time</div>}
       </Link>
       <div className="ps-4 flex lg:mt-0 mt-4 ">
         <div className="text-[#B7BCCE] flex items-end gap-2 ">
