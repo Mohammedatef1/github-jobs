@@ -1,4 +1,3 @@
-// components/Jobs.tsx
 import Context from "@/context/Context";
 import useJobs from "@/hooks/useJobs";
 import React, { useContext } from "react";

@@ -2,7 +2,7 @@ import Context from "@/context/Context";
 import { useContext } from "react";
 import EarthIcon from "../icons/EarthIcon";
 
-const FiterOptions = () => {
+const FilterOptions = () => {
   const context = useContext(Context);
 
   if (!context) {
@@ -56,13 +56,13 @@ const FiterOptions = () => {
         <input
           type="radio"
           name="city"
-          id="amsterdam"
-          value="Amsterdam"
-          checked={location === "Amsterdam"}
+          id="cairo"
+          value="Cairo"
+          checked={location === "Cairo"}
           onChange={handleChange}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
-        <label htmlFor="amsterdam">Amsterdam</label>
+        <label htmlFor="cairo">Cairo</label>
 
         <input
           type="radio"
@@ -78,16 +78,16 @@ const FiterOptions = () => {
         <input
           type="radio"
           name="city"
-          id="berlin"
-          value="Berlin"
+          id="toronto"
+          value="Toronto"
           onChange={handleChange}
-          checked={location === "Berlin"}
+          checked={location === "Toronto"}
           className="w-[18px] h-[18px] me-3 outline-none "
         />
-        <label htmlFor="berlin">Berlin</label>
+        <label htmlFor="toronto">Toronto</label>
       </div>
     </div>
   );
 };
 
-export default FiterOptions;
+export default FilterOptions;
