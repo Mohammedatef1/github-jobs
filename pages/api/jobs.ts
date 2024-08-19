@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       params: {
         engine: "google_jobs",
         q: q,
-        api_key: "7a48d6374e895b345bb2bec956d2d7eb6bbb7046298697a835e03f778aa5e7bb",
+        api_key: process.env.SERP_API_KEY,
         location,
       },
     });
