@@ -6,10 +6,6 @@ const JobDetails = () => {
   const router = useRouter();
   const { jobId, title, company_name, location, description, thumbnail, related_links } = router.query;
 
-  console.log(router.query);
-
-  console.log(jobId);
-
   if (!jobId) {
     return null;
   }
