@@ -22,11 +22,11 @@ const FilterOptions = () => {
           id="fulltime"
           checked={fulltime}
           onChange={() => setFulltime(!fulltime)}
-          className="w-4 h-4 rounded-sm mx-4 border-4 border-red-500 outline-none hover:border-red-700"
+          className="w-4 h-4 rounded-sm ms-4 border-4 border-red-500 outline-none hover:border-red-700 cursor-pointer"
         />
         <label
           htmlFor="fulltime"
-          className="text-[#334680] font-[500] text-sm font-[poppins]">
+          className="text-[#334680] ps-4 font-[500] text-sm font-[poppins] cursor-pointer">
           Full time
         </label>
       </div>
@@ -36,7 +36,7 @@ const FilterOptions = () => {
         <input
           type="text"
           placeholder="City, state, zip code or country"
-          className="outline-none text-sm flex-grow  font-[roboto] "
+          className="outline-none text-sm flex-grow  font-[roboto]"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         />
@@ -49,9 +49,13 @@ const FilterOptions = () => {
           value="London"
           onChange={handleChange}
           checked={location === "London"}
-          className="w-[18px] h-[18px] me-3 outline-none"
+          className="w-[18px] h-[18px]  outline-none cursor-pointer"
         />
-        <label htmlFor="london">London</label>
+        <label
+          htmlFor="london"
+          className="ps-3 cursor-pointer">
+          London
+        </label>
 
         <input
           type="radio"
@@ -60,9 +64,13 @@ const FilterOptions = () => {
           value="Cairo"
           checked={location === "Cairo"}
           onChange={handleChange}
-          className="w-[18px] h-[18px] me-3 outline-none "
+          className="w-[18px] h-[18px] outline-none cursor-pointer"
         />
-        <label htmlFor="cairo">Cairo</label>
+        <label
+          htmlFor="cairo"
+          className="ps-3 cursor-pointer">
+          Cairo
+        </label>
 
         <input
           type="radio"
@@ -71,9 +79,13 @@ const FilterOptions = () => {
           value="New York"
           onChange={handleChange}
           checked={location === "New York"}
-          className="w-[18px] h-[18px] me-3 outline-none "
+          className="w-[18px] h-[18px] outline-none cursor-pointer"
         />
-        <label htmlFor="newyork">New York</label>
+        <label
+          htmlFor="newyork"
+          className="ps-3 cursor-pointer">
+          New York
+        </label>
 
         <input
           type="radio"
@@ -82,9 +94,13 @@ const FilterOptions = () => {
           value="Toronto"
           onChange={handleChange}
           checked={location === "Toronto"}
-          className="w-[18px] h-[18px] me-3 outline-none "
+          className="w-[18px] h-[18px] outline-none cursor-pointer"
         />
-        <label htmlFor="toronto">Toronto</label>
+        <label
+          htmlFor="toronto"
+          className="ps-3 cursor-pointer">
+          Toronto
+        </label>
       </div>
     </div>
   );
