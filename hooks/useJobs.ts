@@ -25,7 +25,7 @@ const fetchJobs = async (query: string, location: string) => {
     console.log(error);
   }
 };
-
+//test
 const useJobs = (): UseQueryResult<Job[], Error> => {
   const context = useContext(Context);
 
